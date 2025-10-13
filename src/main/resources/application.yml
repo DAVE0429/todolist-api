@@ -1,0 +1,23 @@
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/study?userInformationSchema=true&characterEncoding=UTF-8&useSSL=true
+    username: happycarrot
+    password: jmh3385
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    jpa:
+      open-in-view: true
+      hibernate:
+        ddl-auto: none
+        naming:
+          physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      show-sql: false
+      properties:
+        hibernate:
+          format_sql: false
+      jackson:
+        serialization:
+          fail-on-empty-beans: false
